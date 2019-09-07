@@ -1,81 +1,227 @@
-<!DOCTYPE html>
-<html>
-    </head>
-        <title>In List</title>
-        
-        <script src="jq/jquery.js" type = "text/javascript">
-        </script>
-        <style type = "text/css">
-            body {
-                /* background-color: 336699; */
-                margin-top: 35 px;
-                background-image: linear-gradient(#336699, rgb(119, 128, 243));
-                /* margin-bottom: 100px;
-                margin-right: 150px;
-                margin-left: 80px; */
-            }
-            p,th {
-                font-family: "Times New Roman", Times, serif;
-                font-style: oblique;
-                color: #f5f5f5
-            }
-            td {
-               /* font-family: "Times New Roman", Times, serif; */
-               /* font-style: oblique; */
-               color: #f5f5f5
-                
-            }
-            table, th, td {
-                border: 1px solid #f5f5f5;
-                size: 345cm
-            }
-            p, th, td {
-                padding: 15px;
-                text-align: center;
-                font-size: 2em
-            } 
-            h2{
-                color : black;
-            }           
-            tr:hover {background-color: #573b3b;}
+<html lang="en">
 
-        </style>
-        <!-- <link href="/assets/style.css" rel="stylesheet" type="text/css"/> -->
-    </head>
-    <body>
-        <div align = "center" id = "inTable" style="overflow-x:auto;">
-            <h1><p>In Mode</p></h1>
-            <table  style="width:50%" align ="center">
-                
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number_Plate</title>
+    <script src="jq/jquery.js" type = "text/javascript"></script>
+    <link rel="stylesheet" href="./style_sheet.css">
+    <!-- <link href="/assests/style.css" rel="stylesheet" type="text/css"/> -->
+</head>
+
+<body>
+    <div class="main">
+        <h1>Number Plate Detection</h1>
+    </div>
+    <div id="body">
+        <div class="container">
+            <h3>Entered</h3>
+            <table class="enter">
                 <tr>
-                    <th >Date</th>
-                    <th>NumberPlate</th> 
+                    <th>Date</th>
+                    <th>Number</th>
                     <th>Time</th>
-                    
                 </tr>
-
-                <tr>
-                    <td>02:09:2019</td>
-                    <td>MH34JE7584</td> 
-                    <td>11:30</td>
-                    
-                </tr>
-                
-                <tr>
-                    <td>03:09:2019</td>
-                    <td>UP45JK3456</td> 
-                    <td>22:28</td>
-                    
-                </tr>
-                <% for(var i=0;i!=name.length;i++){%>
-                    <tr>
-                        <td><%= name[i]['DATE'] %></td>
-                        <td><%= name[i]['NUMBER'] %></td> 
-                        <td><%= name[i]['TIME'] %></td>
-                        
-                    </tr>
-                <%}%>
             </table>
+
+            <div class="scroll_bar">
+
+                <table>
+                        <% for(var i=0;i!=name.length;i++){%>
+                            <tr>
+                                <td><%= name[i]['DATE'] %></td>
+                                <td><%= name[i]['NUMBER'] %></td> 
+                                <td><%= name[i]['TIME'] %></td>
+                                
+                            </tr>
+                        <%}%>
+                    <tr>
+                        <td>12</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>45467</td>
+                        <td>13:56</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>967495</td>
+                        <td>14:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>45467</td>
+                        <td>13:56</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>967495</td>
+                        <td>14:00</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>45467</td>
+                        <td>13:56</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>967495</td>
+                        <td>14:00</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>45467</td>
+                        <td>13:56</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>967495</td>
+                        <td>14:00</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>45467</td>
+                        <td>13:56</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>967495</td>
+                        <td>14:00</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </body>
+
+        <div class="exit-container">
+            <h3>Exit</h3>
+
+            <table class="exit">
+                <tr>
+                    <th id="first">Entry Date</th>
+                    <th>Exit Date</th>
+                    <th>Number</th>
+                    <th>Entry Time</th>
+                    <th id="last">Exit Time</th>
+                </tr>
+            </table>
+            
+            <div class="exit-scroll">
+
+                <table class="exit">
+                        <% for(var i=0;i!=name.length;i++){%>
+                            <tr>
+                                <td><%= name[i]['DATE'] %></td>
+                                <td><%= name[i]['NUMBER'] %></td> 
+                                <td><%= name[i]['TIME'] %></td>
+                                
+                            </tr>
+                        <%}%>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>12:02:19</td>
+                        <td>12:02:19</td>
+                        <td>859495</td>
+                        <td>12:30</td>
+                        <td>12:30</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

@@ -16,27 +16,27 @@ var data = [{NUMBER : 'MH34NK9876' , TIME : '12:30' , DATE : '02:09:2019'},{NUMB
 //     console.log('plate pushed')
 // });
 
-var mongo = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017';
+// var mongo = require('mongodb').MongoClient;
+// var url = 'mongodb://localhost:27017';
 
-mongo.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }, (err, client) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  //...
-});
-var db = client.db('kennel');
-var collection = db.collection('dogs');
-collection.insertOne({name: 'Roger'}, (err, result) => {
+// mongo.connect(url, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+//   }, (err, client) => {
+//   if (err) {
+//     console.error(err)
+//     return
+//   }
+//   //...
+// });
+// var db = client.db('kennel');
+// var collection = db.collection('dogs');
+// collection.insertOne({name: 'Roger'}, (err, result) => {
 
-});
-collection.insertMany([{name: 'Togo'}, {name: 'Syd'}], (err, result) => {
+// });
+// collection.insertMany([{name: 'Togo'}, {name: 'Syd'}], (err, result) => {
 
-});
+// });
 module.exports = function(app){
     
     app.get('/in',function(req,res){
