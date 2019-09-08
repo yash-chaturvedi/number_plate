@@ -7,14 +7,16 @@ var out_number_plate = [{
     ENTRY_TIME : '17:30',
     EXIT_TIME : '10:30'
 }];
-
+var jj = [];
 var MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://test:test@cluster0-razp3.mongodb.net/test?retryWrites=true&w=majority";
 MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
     if(error) {
         throw error;
     }
-    db = client.db("Number_plate_detection_in");
+    const db = client.db("Number_plate_detection_in");
+    // var cursor = [db.collection('inventory').find({})];
+    // console.log(cursor);
     collection = db.collection("in_data");
     collection.count(function (err, res) {
         if (err)
@@ -22,13 +24,24 @@ MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
         console.log(res);
         // db.close();
     });
-    collection.find({}, {explain:true}).explain(function(err, docs) {
+    collection.find({}, {explain:true}).toArray(function(err, docs) {
         assert.equal(null, err);
-        console.log(docs);
+        jj = docs;
+        // console.log(JSON.stringify(docs, null, 4));
+        // console.log(docs);
         // var obj2 = JSON.parse(JSON.stringify(docs.ok));
         // console.log(obj2);
-        // db.close();
+        client.close();
     });
+    // function iterateFunc(doc) {
+    //     console.log(JSON.stringify(doc, null, 4));
+    //  }
+     
+    //  function errorFunc(error) {
+    //     console.log(error);
+    //  }
+     
+    //  cursor.forEach(iterateFunc, errorFunc);
     // var js = collection.find({});
     // console.log(js);
     // console.log(js);
@@ -39,7 +52,7 @@ module.exports = function(app){
     
     app.get('/in',function(req,res){
         
-        res.render('in',{in_ : in_number_plate, out_ : out_number_plate});
+        res.render('in',{in_ : in_number_plate, out_ : out_number_plate, j : jj});
     });
     
 
