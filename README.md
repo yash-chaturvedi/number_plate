@@ -3,11 +3,11 @@
 *This repository is for web app and database management of number plate detection. For detection techniques visit another repo.*
 
 ### How to run
-1. Import the ```final.py``` file in your code.  
-2. For every entry of a vehicle call ```entryGate``` function with params : ```NUMBER,ENTRY_DATE,ENTRY_TIME,PHONE_NO,MESSAGE```.
-3. For exit entry of a vehicle call ```exitGate``` function with params : ```NUMBER,EXIT_DATE,EXIT_TIME,GATE_NO,MESSAGE```.
-3. To run the web-app call the function ```real``` from the ```final.py``` file.
-4. The detected number plate will be stored on the database with required ENTRY / EXIT conditions.
+1. Import the ```final.py``` file in your code  
+2. For every entry of a vehicle call ```entryGate``` function with params: ```NUMBER,ENTRY_DATE,ENTRY_TIME,PHONE_NO,MESSAGE```
+3. For exit entry of a vehicle call ```exitGate``` function with params: ```NUMBER,EXIT_DATE,EXIT_TIME,GATE_NO,MESSAGE```
+3. To run the web-app call the function ```real``` from the ```final.py``` file
+4. The detected number plate will be stored on the database with required ENTRY / EXIT conditions
 
 ### Built with
 1. **[MongoDB](https://www.mongodb.com/)**
