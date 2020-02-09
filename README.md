@@ -1,4 +1,5 @@
-# Decentralised Database System And Web Application for Vehicle Nummber Plate Detection 
+# Decentralised Database System And Web Application 
+### Vehicle Nummber Plate Detection 
 *This repository is for web app and database management of number plate detection. For detection techniques visit another repo.*
 
 ### How to run
