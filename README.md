@@ -19,7 +19,7 @@
 ![](images/database_Collection.jpg)
 
 ### Alerting Message from Code
-![](images/alert_message.jpeg)
+![](images/alert_message.jpg)
 
 ### Current WebApp
 ![](images/current_layout.jpeg)
