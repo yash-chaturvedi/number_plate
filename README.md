@@ -16,20 +16,20 @@
 4. **[AdobeXD](https://www.adobe.com/in/products/xd/details.html)**
 
 ### Database Collection
-![](images/Database_Collection.jpg)
+![](images/database_Collection.jpg)
 
 ### Alerting Message from Code
-![](images/Alert_message.jpeg)
+![](images/alert_message.jpeg)
 
 ### Current WebApp
-![](images/Current_layout.jpeg)
+![](images/current_layout.jpeg)
 
 ### Future work
 1. Improving layout of web-app
 2. Adding parking charges
 
 ### Final WeBApp Design
-![](images/Final_Design.jpeg)
+![](images/final_Design.jpeg)
 
 ### Contributors
 1. Rishesh Agarwal
